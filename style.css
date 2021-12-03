@@ -1,0 +1,138 @@
+*{
+    font-family: "Montserrat", sans-serif;
+    padding: 0 1%;
+    margin: 0;
+    box-sizing: border-box; 
+}
+
+    /* For Home Css */
+    
+.head{
+    background-color: #7c3aed;
+    padding: .8rem;
+    border-bottom-left-radius: 1rem;
+    color: white;
+    }
+.a-balika{
+    padding: 15px;
+    font-size: 17px;
+    font-weight: bold;
+}
+.head-link{
+    box-sizing: border-box;
+    text-align:right;
+    font-size: 17px;
+    text-decoration: none;
+}
+.image{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 60%;
+    height: auto;
+}
+.adarsh-head{
+    display: block;
+    color:darkgray;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+    text-align: center;
+    padding-bottom: 4rem;
+}
+.background-color{
+    margin-bottom: 8rem;
+}
+.home-para{
+    padding: 0px 5rem;
+    text-align: center;
+}
+.readMore{
+    margin: 1rem 0;
+    text-align: center;
+    margin-bottom: 8rem;
+}
+.render-link{
+    padding: 0.8rem .9rem;
+    border: 2px solid  #7c3aed;
+    border-radius: 4rem;
+    font-size: 1rem;
+    text-decoration: none;
+}
+.render-first{
+    color:#fff ;
+    border: 2px solid #7c3aed;
+    background-color:#7c3aed ;
+}
+.footer{
+    background-color: #7c3aed;
+    padding: 2rem;
+    color: white;
+    border-top-right-radius:1rem ;
+    text-align: center;
+}
+.sep-two{
+    margin: 0 2.5rem;
+}
+.carry-links{
+    text-align: center;
+    margin-top: 1rem;
+}
+.soc-link{
+    color: white;
+    text-decoration: none;
+    padding: 5px;;
+    font-size :17px;
+    text-align: center;
+}
+
+/*       For project Css         */
+
+.my-heading{
+    font-size: 2rem;
+    text-align: center;
+    margin: 7rem;
+    color: #6b7280;
+}
+.prof-los{
+    font-size: 1.7rem;
+    text-align: center;
+    padding: 5px;
+}
+.small{
+    display: block;
+    text-align: center;
+}
+.pro-parag{
+    display: block;
+    text-align: center;
+    padding: 1rem;
+}
+.proje-link{
+    margin: .3rem 0;
+    text-align: center;
+    padding: 0rem 4rem;
+    margin-bottom: 2.5rem;
+}
+.div-margin{
+    margin: 8rem 0;
+}
+
+/* For  Blogs css*/
+
+.font-blog{
+    text-align: center;
+}
+
+#about{
+    text-align: left;
+    margin:7rem 0;
+}
+.h3{
+    margin: 2rem ;
+    padding: 0 5rem;
+}
+#add-image{
+    background-image: url(sunset.jpg);
+    background-size: contain;
+}
