@@ -10,6 +10,7 @@
     </title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,500;0,700;1,400&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="style.css">
@@ -17,176 +18,203 @@
 
 <body>
     <header class="head">
-        <div class="a-balika">Manoj kumar</div>
-        <div style="text-align: right;">
-            <a class="head head-link " href="index.html">home</a>
-            <a class="head head-link " href="project.html"><strong>projects</strong></a>
-            <a class="head head-link " href="blogs.html">blogs</a>
-            <a class="head head-link " href="about.html">about</a>
+        <a href="./index.html" class="a-balika logo">IAmDeveloper</a>
+        <div class="page-link">
+            <a href="index.html">HOME</a>
+            <a class="page-link-style" href="project.html">PROJECTS</a>
+            <a href="blogs.html">BLOGS</a>
         </div>
     </header>
-    <h2 class="my-heading">
-        see my <span style="color:rebeccapurple">code</span>
+    <h2 class="page-heading">
+        See my <span>Code</span>
     </h2>
-    <div class="div-margin">
-        <h3 class="prof-los">general-knowledge-quiz</h3>
-        <small class="small">November,2021</small>
-        <p class="pro-parag">Play this quiz game and improve your general knowledge about Mahendra Singh Dhoni.</p>
-        <div class="proje-link">
-            <a class="render-link render-first "
-                href="https://replit.com/@ManojKumar163/Club-everything-to-make-the-game?embed=1&output=1">Live
-                Project</a> <br>
-        </div>
-        <div class="proje-link">
-            <a class="render-link marge" href="https://github.com/manojkumar8400/mark2-project-of-Neog.git">View
-                Source</a>
-        </div>
-    </div>
-    <div class="div-margin">
-        <h3 class="prof-los">how well do you know me?</h3>
-        <small class="small">November,2021</small>
-        <p class="pro-parag">
+    <section class="project-section">
+        <h2>ViewTube - video library</h2>
+        <p class="small-txt">June,2022</p>
+        <p class="about-project">PineTube is a video library where you can watch videos of different categories. It's mobile responsive.</p>
+        <p class="about-project"><strong>Features : </strong> Authentication (Login, Signup), Playlist management,
+            Suggestion search, History, Like, Watch later management, Single Video, Filter by category</p>
+        <p class="about-project"><strong>Tech Stack : </strong> Reactjs, Redux Toolkit, React Router, Context API,
+            Reducer, Mock Backend(for backend), HTML5, CSS3</p>
+        <a class="primary-btn" data-text="Live Project" href="https://viewtube-video-library.netlify.app/">Live
+            Project</a> <br />
+        <a class="secondary-btn" data-text="View Source" href="https://github.com/manojkumar8400/video-library">View
+            Source</a>
+    </section>
+    <section class="project-section">
+        <h2>NEPTUNE - e-commerce website</h2>
+        <p class="small-txt">April,2022</p>
+        <p class="about-project">NEPTUNE is a camera gallery ecommerce website.</p>
+        <p class="about-project"><strong>Features : </strong> Authentication (Login, Signup), Product Listing, Products
+            Filters, Product Search, Cart Management, Wishlist Management, Price Calculation, Address Management.</p>
+        <p class="about-project"><strong>Tech Stack : </strong> Reactjs, React Router, Context API, Reducer, Mock
+            Backend(for backend), HTML5, CSS3</p>
+        <a class="primary-btn" data-text="Live Project" href="https://neptune-ecomm.netlify.app/">Live
+            Project</a> <br />
+        <a class="secondary-btn" data-text="View Source" href="https://github.com/manojkumar8400/Neptune">View
+            Source</a>
+    </section>
+    <section class="project-section">
+        <h2>Notejoy - note taking app</h2>
+        <p class="small-txt">May,2022</p>
+        <p class="about-project">Notejoy is a note taking app to organise your tasks effectively.</p>
+        <p class="about-project"><strong>Features : </strong> Authentication (Login as a guest), CRUD operations with
+            notes, CRUD operation with labels, client side sorting.</p>
+        <p class="about-project"><strong>Tech Stack : </strong> Reactjs, React Router, Context API, Reducer, Mock
+            Backend(for backend), HTML5, CSS3</p>
+        <a class="primary-btn" data-text="Live Project" href="https://github.com/manojkumar8400/notes-app">Live
+            Project</a> <br />
+        <a class="secondary-btn" data-text="View Source" href="https://notejoy-notes-app.netlify.app/">View
+            Source</a>
+    </section>
+    <section class="project-section">
+        <h2>neoQuiz - quiz game</h2>
+        <p class="small-txt">june,2022</p>
+        <p class="about-project">NeoQuiz is a Quiz game in which users can play three types of games. It is mobile
+            Responsive.</p>
+        <p class="about-project"><strong>Features : </strong> Authentication (Login as a guest), CRUD operations with
+            notes, CRUD operation with labels, client side sorting.</p>
+        <p class="about-project"><strong>Tech Stack : </strong> Reactjs, React Router, Context API, Reducer, Mock
+            Backend(for backend), HTML5, CSS3.</p>
+        <a class="primary-btn" data-text="Live Project" href="https://neoquiz-quiz-app.netlify.app/">Live
+            Project</a> <br />
+        <a class="secondary-btn" data-text="View Source" href="https://github.com/manojkumar8400/neoQuiz-app">View
+            Source</a>
+    </section>
+    <section class="project-section">
+        <h2>Iconic Ui - component library</h2>
+        <p class="small-txt">Feb,2022</p>
+        <p class="about-project">Iconic Ui is a CSS library with predefined classes that helps to develop UI faster.
+            Built with HTML, CSS.</p>
+        <p class="about-project"><strong>Features : </strong> Authentication (Login as a guest), CRUD operations with
+            notes, CRUD operation with labels, client side sorting.</p>
+        <p class="about-project"><strong>Tech Stack : </strong>HTML5, CSS3.</p>
+        <a class="primary-btn" data-text="Live Project" href="https://iconic-ui.netlify.app/">Live
+            Project</a> <br />
+        <a class="secondary-btn" data-text="View Source" href="https://github.com/manojkumar8400/Component-Library">View
+            Source</a>
+    </section>
+    <section class="project-section">
+        <h2>General Knowledge Quiz</h2>
+        <p class="small-txt">November,2021</p>
+        <p class="about-project">Play this quiz game and improve your general knowledge about Mahendra Singh Dhoni.</p>
+        <a class="primary-btn" data-text="Live Project" href="https://replit.com/@ManojKumar163/Club-everything-to-make-the-game?embed=1&output=1">Live
+            Project</a> <br />
+        <a class="secondary-btn" data-text="View Source" href="https://github.com/manojkumar8400/mark2-project-of-Neog.git">View
+            Source</a>
+    </section>
+    <section class="project-section">
+        <h2>How well do you know me?</h2>
+        <p class="small-txt">November,2021</p>
+        <p class="about-project">
             A CLI app built with nodeJS. You can send this to your friends and find out who really knows you.
         </p>
-        <div class="proje-link">
-            <a class="render-link render-first "
-                href="https://replit.com/@ManojKumar163/A-Quiz-Game-About-Me?embed=1&output=1#index.js">Live
-                Project</a> <br>
-        </div>
-        <div class="proje-link">
-            <a class="render-link marge" href="https://github.com/manojkumar8400/About-me.git">View
-                Source</a>
-    </div>
-        
-    <div class="div-margin">
-        <h3 class="prof-los">cash-register-manager</h3>
-        <small class="small">December,2021</small>
-        <p class="pro-parag">A cash register manager which helps the user by telling how can he/she return the change to the customer with minimum number of notes.</p>
-        <div class="proje-link">
-            <a class="render-link render-first " href="https://cash-register-9b490c.netlify.app">Live Project</a>
-            <br>
-        </div>
-        <div class="proje-link marge">
-            <a class="render-link" href="https://github.com/manojkumar8400/cash-register.git">View Source</a>
-        </div>
-    </div>
-    
-    <div class="div-margin">
-        <h3 class="prof-los">emoji-interpreter</h3>
-        <small class="small">December,2021</small>
-        <p class="pro-parag">I struggle with understanding the emojis. Do you too? If yes, then see this library of emojis with meaning</p>
-        <div class="proje-link">
-            <a class="render-link render-first " href="https://ndkzf.csb.app/">Live Project</a>
-            <br>
-     </div>
-        <div class="proje-link marge">
-            <a class="render-link" href="https://github.com/manojkumar8400/emoji-interpreter.git">View Source</a>
-        </div>
-    </div>
-        
-    <div class="div-margin">
-        <h3 class="prof-los">saaregama-caarvan</h3>
-        <small class="small">December,2021</small>
-        <p class="pro-parag">If you click on any singer's name, you can see his songs.</p>
-        <div class="proje-link">
-            <a class="render-link render-first " href="https://f10kx.csb.app/">Live Project</a>
-            <br>
-     </div>
-        <div class="proje-link marge">
-            <a class="render-link" href="https://github.com/manojkumar8400/bollywood-masala.git">View Source</a>
-        </div>
-    </div>
-        
-    <div class="div-margin">
-        <h3 class="prof-los">is-your-birthday-lucky</h3>
-        <small class="small">December,2021</small>
-        <p class="pro-parag">A website which can help you to check whether your birthday is lucky or not.</p>
-        <div class="proje-link">
-            <a class="render-link render-first " href="https://birthday-lucky-baef79.netlify.app">Live Project</a>
-            <br>
-        </div>
-        <div class="proje-link marge">
-            <a class="render-link" href="https://github.com/manojkumar8400/birthday-lucky.git">View Source</a>
-        </div>
-    </div>
-    
-    
-    <div class="div-margin">
-        <h3 class="prof-los">learn-triangle</h3>
-        <small class="small">December,2021</small>
-        <p class="pro-parag">A website which helps you to learn about triangles.</p>
-        <div class="proje-link">
-            <a class="render-link render-first " href="https://fun-triangle-f4f120.netlify.app">Live Project</a>
-            <br>
-        </div>
-        <div class="proje-link marge">
-            <a class="render-link" href="https://github.com/manojkumar8400/fun-triangle.git">View Source</a>
-        </div>
-    </div>
+        <a class="primary-btn" data-text="Live Project" href="https://replit.com/@ManojKumar163/A-Quiz-Game-About-Me?embed=1&output=1#index.js">Live
+            Project</a> <br>
+        <a class="secondary-btn" data-text="View Source" class="render-link marge secondary-btn" href="https://github.com/manojkumar8400/About-me.git">View
+            Source</a>
+    </section>
 
-    </div>
-    <div class="div-margin">
-        <h3 class="prof-los">banana-translater</h3>
-        <small class="small">November,2021</small>
-        <p class="pro-parag">If you write something in english, it will translate in Banana language.</p>
-        <div class="proje-link">
-            <a class="render-link render-first " href="https://banana-translator-532ab0.netlify.app">Live Project</a>
-            <br>
-        </div>
-        <div class="proje-link marge">
-            <a class="render-link" href="https://github.com/manojkumar8400/banana-translater.git">View Source</a>
-        </div>
-    </div>
-    
-    <div class="div-margin">
-        <h3 class="prof-los">jive-translater</h3>
-        <small class="small">November,2021</small>
-        <p class="pro-parag">If you write something in english, it will translate in Jive language.</p>
-        <div class="proje-link">
-            <a class="render-link render-first" href="https://jive-translator-35ac04.netlify.app">Live Project</a> <br>
-        </div>
-        <div class="proje-link marge">
-            <a class="render-link" href="https://github.com/manojkumar8400/jive-translater.git">View Source</a>
-        </div>
-    </div>
-    
-    <div class="div-margin">
-        <h3 class="prof-los">palindrome-birthdays</h3>
-        <small class="small">December,2021</small>
-        <p class="pro-parag">App which checks whether your birthday is a palindrome birthday or not.</p>
-        <div class="proje-link">
-            <a class="render-link render-first " href="https://birthday-palindrome-0f6c14.netlify.app">Live Project</a>
-            <br>
-        </div>
-        <div class="proje-link marge">
-            <a class="render-link" href="https://github.com/manojkumar8400/birthday-palindrome.git">View Source</a>
-        </div>
-    </div>
-    
-    <div class="div-margin">
-        <h3 class="prof-los">profit-or-loss</h3>
-        <small class="small">December,2021</small>
-        <p class="pro-parag">A website which helps user how much profit or loss he/she is making in percentage & absolute value.</p>
-        <div class="proje-link">
-            <a class="render-link render-first " href="https://profit-loss-701dc0.netlify.app">Live Project</a>
-            <br>
-        </div>
-        <div class="proje-link marge">
-            <a class="render-link" href="https://github.com/manojkumar8400/stock-profit-loss.git">View Source</a>
-        </div>
-    </div>
-    
+    <section class="project-section">
+        <h2>Cash Register Manager</h2>
+        <p class="small-txt">December,2021</p>
+        <p class="about-project">A cash register manager which helps the user by telling how can he/she return the
+            change to the customer with minimum number of notes.</p>
+        <a class="primary-btn" data-text="Live Project" href="https://cash-register-9b490c.netlify.app">Live
+            Project</a>
+        <br>
+        <a class="secondary-btn" data-text="View Source" href="https://github.com/manojkumar8400/cash-register.git">View
+            Source</a>
+    </section>
+
+    <section class="project-section">
+        <h2>Emoji Interpreter</h2>
+        <p class="small-txt">December,2021</p>
+        <p class="about-project">I struggle with understanding the emojis. Do you too? If yes, then see this library of
+            emojis with meaning</p>
+        <a class="primary-btn" data-text="Live Project" href="https://ndkzf.csb.app/">Live Project</a>
+        <br>
+        <a class="secondary-btn" data-text="View Source" href="https://github.com/manojkumar8400/emoji-interpreter.git">View
+            Source</a>
+    </section>
+
+    <section class="project-section">
+        <h2>Saaregama Caarvan</h2>
+        <p class="small-txt">December,2021</p>
+        <p class="about-project">If you click on any singer's name, you can see his songs.</p>
+        <a class="primary-btn" data-text="Live Project" href="https://f10kx.csb.app/">Live Project</a>
+        <br>
+        <a class="secondary-btn" data-text="View Source" href="https://github.com/manojkumar8400/bollywood-masala.git">View
+            Source</a>
+    </section>
+    <section class="project-section">
+        <h2>Is Your Birthday Lucky</h2>
+        <p class="small-txt">December,2021</p>
+        <p class="about-project">A website which can help you to check whether your birthday is lucky or not.</p>
+        <a class="primary-btn" data-text="Live Project" href="https://birthday-lucky-baef79.netlify.app">Live
+            Project</a>
+        <br>
+        <a class="secondary-btn" data-text="View Source" href="https://github.com/manojkumar8400/birthday-lucky.git">View
+            Source</a>
+    </section>
+    <section class="project-section">
+        <h2>Learn Triangle</h2>
+        <p class="small-txt">December,2021</p>
+        <p class="about-project">A website which helps you to learn about triangles.</p>
+        <a class="primary-btn" data-text="Live Project" href="https://fun-triangle-f4f120.netlify.app">Live
+            Project</a>
+        <br>
+        <a class="secondary-btn" data-text="View Source" href="https://github.com/manojkumar8400/fun-triangle.git">View
+            Source</a>
+    </section>
+    <section class="project-section">
+        <h2>Banana Translater</h2>
+        <p class="small-txt">November,2021</p>
+        <p class="about-project">If you write something in english, it will translate in Banana language.</p>
+        <a class="primary-btn" data-text="Live Project" href="https://banana-translator-532ab0.netlify.app">Live
+            Project</a>
+        <br>
+        <a class="secondary-btn" data-text="View Source" href="https://github.com/manojkumar8400/banana-translater.git">View
+            Source</a>
+    </section>
+    <section class="project-section">
+        <h2>Jive Translater</h2>
+        <p class="small-txt">November,2021</p>
+        <p class="about-project">If you write something in english, it will translate in Jive language.</p>
+        <a class="primary-btn" data-text="Live Project" href="https://jive-translator-35ac04.netlify.app">Live
+            Project</a> <br>
+        <a class="secondary-btn" data-text="View Source" href="https://github.com/manojkumar8400/jive-translater.git">View
+            Source</a>
+    </section>
+    <section class="project-section">
+        <h2>Palindrome Birthdays</h2>
+        <p class="small-txt">December,2021</p>
+        <p class="about-project">App which checks whether your birthday is a palindrome birthday or not.</p>
+        <a class="primary-btn" data-text="Live Project" href="https://birthday-palindrome-0f6c14.netlify.app">Live
+            Project</a>
+        <br>
+        <a class="secondary-btn" data-text="View Source" href="https://github.com/manojkumar8400/birthday-palindrome.git">View
+            Source</a>
+    </section>
+    <section class="project-section">
+        <h2>Profit or Loss</h2>
+        <p class="small-txt">December,2021</p>
+        <p class="about-project">A website which helps user how much profit or loss he/she is making in percentage &
+            absolute value.</p>
+        <a class="primary-btn" data-text="Live Project" href="https://profit-loss-701dc0.netlify.app">Live
+            Project</a>
+        <br>
+        <a class="secondary-btn" data-text="View Source" href="https://github.com/manojkumar8400/stock-profit-loss.git">View
+            Source</a>
+    </section>
     <footer class="footer">
-        <div>
-            <h3>social media presence</h3>
+        <p>social media presence</p>
+        <div class="social-media-links">
+            <a href="https://github.com/manojkumar8400" target="_blank"><i class="fa fa-github"></i></a>
+            <a href="https://twitter.com/manoj21_kumar" target="_blank"><i class="fa fa-twitter"></i></a>
+            <a href="https://in.linkedin.com/in/manoj-kumar-340471219" target="_blank"><i
+                    class="fa fa-linkedin"></i></a>
         </div>
-        <div class="carry-links">
-            <a class="soc-link" href="https://github.com/manojkumar8400" target="_blank">github</a>
-            <a class="soc-link sep-two" href="https://twitter.com/manoj21_kumar">twitter</a>
-            <a class="soc-link" href="https://in.linkedin.com/in/manoj-kumar-340471219">linkedin</a>
-        </div>
-        <small>Dharamshala,Himachal Pradesh</small>
-
     </footer>
 
 </body>
