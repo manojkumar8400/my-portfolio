@@ -1,46 +1,42 @@
-import React from "react"
-import {
-  ExternalLink,
-  Github,
-  Calendar,
-  Users,
-  Tag,
-  ChevronRight,
-  Filter,
-  Search,
-  Star,
-  Clock,
-  Code,
-  Zap,
-  Moon,
-  Sun,
-} from "lucide-react"
+import { Link } from "react-router-dom"
+import { Moon, Sun } from "lucide-react"
 const Header = ({ darkMode, themeChange }) => {
-  const navItems = ["Home", "Skills", "Projects", "Contact"]
-  console.log({ darkMode })
+  const navItems = ["Home", "Projects", "Blogs",  "Contact"]
 
   return (
     <header
       className={`${
         darkMode ? "bg-black border-gray-700" : "bg-white border-gray-100"
-      } bg-white- dark:bg-black- text-black dark:text-white shadow-md`}
+      } bg-white- dark:bg-black- text-black dark:text-white shadow-md fixed top-0 right-0 w-full z-[11]`}
     >
       <div className='max-w-7xl mx-auto px-4 py-4 flex justify-between items-center'>
         {/* Logo */}
         <div className='text-2xl font-bold text-green-500'>CyberDev</div>
 
         {/* Nav Links */}
-        <div className={`flex justify-between items-center gap-10 ${darkMode ? 'text-white' : 'text-black'}`}>
+        <div
+          className={`flex justify-between items-center gap-10 ${
+            darkMode ? "text-white" : "text-black"
+          }`}
+        >
           <nav className='flex space-x-8'>
             {navItems.map((item) => (
-              <a
+              <Link
                 key={item}
-                href={`#${item.toLowerCase()}`}
+                to={item === "Home" ? "/" : `/${item.toLowerCase()}`}
                 className='relative group font-semibold'
               >
                 {item}
                 <span className='absolute left-0 -bottom-1 w-0 h-0.5 bg-green-500 transition-all group-hover:w-full'></span>
-              </a>
+              </Link>
+              // <a
+              //   key={item}
+              //   href={`#${item.toLowerCase()}`}
+              //   className='relative group font-semibold'
+              // >
+              //   {item}
+              //   <span className='absolute left-0 -bottom-1 w-0 h-0.5 bg-green-500 transition-all group-hover:w-full'></span>
+              // </a>
             ))}
           </nav>
           <button
