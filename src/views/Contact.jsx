@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
-import { Mail, Phone, MapPin, Send, Github, Linkedin, Twitter, Instagram, MessageCircle, Calendar, Sun, Moon, CheckCircle, AlertCircle, X } from 'lucide-react';
+import { Mail, Phone, MapPin, Send, Github, Linkedin, MessageCircle, CheckCircle, AlertCircle } from 'lucide-react';
+import emailjs from '@emailjs/browser';
 
 const Contact = ({ isDarkMode }) => {
   // const [isDarkMode, setIsDarkMode] = useState(true);
@@ -24,23 +25,60 @@ const Contact = ({ isDarkMode }) => {
   const handleSubmit = (e) => {
     e.preventDefault();
     setIsSubmitting(true);
+    setSubmitStatus(null);
     
-    // Simulate form submission
-    setTimeout(() => {
+    const SERVICE_ID = import.meta.env.VITE_EMAILJS_SERVICE_ID;
+    const TEMPLATE_ID = import.meta.env.VITE_EMAILJS_TEMPLATE_ID;
+    const PUBLIC_KEY = import.meta.env.VITE_EMAILJS_PUBLIC_KEY;
+    
+    // Check if credentials are set from environment variables
+    if (!SERVICE_ID || !TEMPLATE_ID || !PUBLIC_KEY) {
       setIsSubmitting(false);
-      setSubmitStatus('success');
-      // Reset form
-      setFormData({
-        name: '',
-        email: '',
-        subject: '',
-        message: '',
-        projectType: 'website'
+      setSubmitStatus('error');
+      return;
+    }
+    
+    // Initialize EmailJS with your public key
+    emailjs.init(PUBLIC_KEY);
+    
+    // Prepare template parameters
+    const templateParams = {
+      from_name: formData.name,
+      from_email: formData.email,
+      subject: formData.subject,
+      message: formData.message,
+      to_email: 'manojprajapati8400@gmail.com',
+      reply_to: formData.email
+    };
+    
+    // Send email using EmailJS
+    emailjs
+      .send(SERVICE_ID, TEMPLATE_ID, templateParams)
+      .then((response) => {
+        console.log('Email sent successfully!', response.status, response.text);
+        setIsSubmitting(false);
+        setSubmitStatus('success');
+        
+        // Reset form
+        setFormData({
+          name: '',
+          email: '',
+          subject: '',
+          message: '',
+          projectType: 'website'
+        });
+        
+        // Clear success message after 5 seconds
+        setTimeout(() => setSubmitStatus(null), 5000);
+      })
+      .catch((error) => {
+        console.error('Failed to send email:', error);
+        setIsSubmitting(false);
+        setSubmitStatus('error');
+        
+        // Clear error message after 5 seconds
+        setTimeout(() => setSubmitStatus(null), 5000);
       });
-      
-      // Clear success message after 5 seconds
-      setTimeout(() => setSubmitStatus(null), 5000);
-    }, 2000);
   };
 
   const contactMethods = [
@@ -49,7 +87,7 @@ const Contact = ({ isDarkMode }) => {
       title: "Email",
       value: "manojprajapati8400@gmail.com",
       description: "Best for detailed project discussions",
-      action: "mailto:manojprajapati8400@gmail.com",
+      action: "https://mail.google.com/mail/?view=cm&to=manojprajapati8400@gmail.com",
       color: "from-blue-500 to-cyan-500"
     },
     {
@@ -82,31 +120,31 @@ const Contact = ({ isDarkMode }) => {
     {
       icon: <Github className="w-5 h-5" />,
       name: "GitHub",
-      handle: "@cyberdev",
-      url: "https://github.com/cyberdev",
+      handle: "@manojkumar8400",
+      url: "https://github.com/manojkumar8400",
       color: "hover:text-gray-600"
     },
     {
       icon: <Linkedin className="w-5 h-5" />,
       name: "LinkedIn",
-      handle: "@cyberdev",
-      url: "https://linkedin.com/in/cyberdev",
+      handle: "@manoj-kumar",
+      url: "https://www.linkedin.com/in/manoj-kumar-340471219/",
       color: "hover:text-blue-600"
     },
-    {
-      icon: <Twitter className="w-5 h-5" />,
-      name: "Twitter",
-      handle: "@cyberdev",
-      url: "https://twitter.com/cyberdev",
-      color: "hover:text-blue-400"
-    },
-    {
-      icon: <Instagram className="w-5 h-5" />,
-      name: "Instagram",
-      handle: "@cyberdev",
-      url: "https://instagram.com/cyberdev",
-      color: "hover:text-pink-500"
-    }
+    // {
+    //   icon: <Twitter className="w-5 h-5" />,
+    //   name: "Twitter",
+    //   handle: "@cyberdev",
+    //   url: "https://twitter.com/cyberdev",
+    //   color: "hover:text-blue-400"
+    // },
+    // {
+    //   icon: <Instagram className="w-5 h-5" />,
+    //   name: "Instagram",
+    //   handle: "@cyberdev",
+    //   url: "https://instagram.com/cyberdev",
+    //   color: "hover:text-pink-500"
+    // }
   ];
 
   // const projectTypes = [
@@ -147,7 +185,13 @@ const Contact = ({ isDarkMode }) => {
                 href={method.action}
                 target={method.action.startsWith('http') ? '_blank' : '_self'}
                 rel={method.action.startsWith('http') ? 'noopener noreferrer' : ''}
-                className={`group rounded-2xl p-6 transition-all duration-300 hover:scale-105 hover:shadow-xl ${
+                onClick={(e) => {
+                  if (method.action.startsWith('mailto:') || method.action.startsWith('tel:')) {
+                    e.preventDefault();
+                    window.location.href = method.action;
+                  }
+                }}
+                className={`group rounded-2xl p-6 transition-all duration-300 hover:scale-105 hover:shadow-xl cursor-pointer ${
                   isDarkMode 
                     ? 'bg-gray-900 hover:shadow-blue-500/10 border border-gray-800'
                     : 'bg-white hover:shadow-blue-500/20 border border-gray-200 shadow-sm'
@@ -190,7 +234,7 @@ const Contact = ({ isDarkMode }) => {
                 </div>
               )}
 
-              <div className="space-y-6">
+              <form onSubmit={handleSubmit} className="space-y-6">
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                   <div>
                     <label className="block text-sm font-medium mb-2">Name *</label>
@@ -282,7 +326,6 @@ const Contact = ({ isDarkMode }) => {
 
                 <button
                   type="submit"
-                  onClick={handleSubmit}
                   disabled={isSubmitting}
                   className={`w-full bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 text-white py-3 px-6 rounded-lg font-medium transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-blue-500/25 flex items-center justify-center gap-2 ${
                     isSubmitting ? 'opacity-50 cursor-not-allowed' : ''
@@ -300,7 +343,7 @@ const Contact = ({ isDarkMode }) => {
                     </>
                   )}
                 </button>
-              </div>
+              </form>
             </div>
 
             {/* Contact Info & Social */}

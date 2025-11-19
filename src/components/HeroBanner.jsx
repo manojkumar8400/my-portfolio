@@ -126,7 +126,7 @@ const HeroBanner = ({ isDarkMode }) => {
       {floatingSkills.map((skill, index) => (
         <div
           key={skill.name}
-          className={`absolute hidden lg:block w-16 h-16 rounded-full flex items-center justify-center text-2xl font-bold shadow-lg backdrop-blur-sm animate-bounce ${
+          className={`absolute hidden lg:flex w-16 h-16 rounded-full items-center justify-center text-2xl font-bold shadow-lg backdrop-blur-sm animate-bounce ${
             isDarkMode
               ? "bg-gray-800/50 text-white border border-gray-700"
               : "bg-white/50 text-gray-800 border border-gray-200"
@@ -143,8 +143,8 @@ const HeroBanner = ({ isDarkMode }) => {
       ))}
 
       {/* Main Content */}
-      <div className='relative z-10 min-h-screen flex items-center'>
-        <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
+      <div className='relative z-10 min-h-screen flex items-center py-8 sm:py-12'>
+        <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full'>
           <div className='grid grid-cols-1 lg:grid-cols-2 gap-12 items-center'>
             {/* Left Content */}
             <div className='text-center lg:text-left space-y-8'>

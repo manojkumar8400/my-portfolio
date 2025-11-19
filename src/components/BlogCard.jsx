@@ -43,9 +43,18 @@ export default function BlogCard({ isDarkMode }) {
   ];
 
   return (
-    <section>
+    <div className={`min-h-screen transition-all duration-500 ${
+      isDarkMode ? 'bg-black text-white' : 'bg-gray-50 text-gray-900'
+    }`}>
+      <div className="px-4 sm:px-6 lg:px-8 py-8 sm:py-12">
+        <div className="max-w-7xl mx-auto space-y-12">
+          <section>
             <div className="text-center mb-12">
-              <h2 className="text-3xl sm:text-4xl font-bold mb-4">Latest Articles</h2>
+              <h2 className={`text-3xl sm:text-4xl font-bold mb-4 ${
+                isDarkMode ? 'text-white' : 'text-gray-900'
+              }`}>
+                Latest Articles
+              </h2>
               <p className={`text-lg ${isDarkMode ? 'text-gray-400' : 'text-gray-600'} max-w-2xl mx-auto`}>
                 Insights and tutorials on modern web development
               </p>
@@ -76,7 +85,9 @@ export default function BlogCard({ isDarkMode }) {
 
                   {/* Content */}
                   <div className="p-6">
-                    <h3 className="text-lg font-bold mb-2 group-hover:text-blue-500 transition-colors">
+                    <h3 className={`text-lg font-bold mb-2 group-hover:text-blue-500 transition-colors ${
+                      isDarkMode ? 'text-white' : 'text-gray-900'
+                    }`}>
                       {blog.title}
                     </h3>
                     <p className={`text-sm mb-4 ${isDarkMode ? 'text-gray-400' : 'text-gray-600'}`}>
@@ -130,5 +141,8 @@ export default function BlogCard({ isDarkMode }) {
               </button>
             </div>
           </section>
+        </div>
+      </div>
+    </div>
   );
 }

@@ -15,7 +15,12 @@ function App() {
     }
   
     useEffect(() => {
-      document.documentElement.classList.toggle("bg-black", darkMode)
+      if (darkMode) {
+        document.documentElement.classList.remove("bg-black")
+        document.documentElement.style.background = "linear-gradient(to bottom right, rgb(17 24 39), rgb(0 0 0), rgb(17 24 39))"
+      } else {
+        document.documentElement.style.background = "linear-gradient(to bottom right, rgb(239 246 255), rgb(255 255 255), rgb(243 232 255))"
+      }
     }, [darkMode])
   
   return (
